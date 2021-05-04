@@ -1,0 +1,16 @@
+import re
+
+str = "你好[你好][你好吗]"
+
+textArr = re.search("[[](.*?)[]]", str).group(0)
+text1 = ""
+i = 1
+while True:
+    if i < len(textArr)-1:
+        text1 += textArr[i]
+
+        i += 1
+    else:
+        break
+
+print(text1)
