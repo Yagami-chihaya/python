@@ -22,6 +22,7 @@ if __name__ == "__main__":
     responese = requests.post(url=url,data=data,headers=header)
 
     text = responese.json()
+    print(text)
     newText = json.dumps(text,ensure_ascii=False)
 
 
